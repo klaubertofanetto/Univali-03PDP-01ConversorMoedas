@@ -1,0 +1,4 @@
+/home/klaubertofanetto/Projects/Conversor_de_moedas/Conversor_de_moedas/bin/Release/Conversor_de_moedas.exe
+/home/klaubertofanetto/Projects/Conversor_de_moedas/Conversor_de_moedas/obj/x86/Release/Conversor_de_moedas.csprojAssemblyReference.cache
+/home/klaubertofanetto/Projects/Conversor_de_moedas/Conversor_de_moedas/obj/x86/Release/Conversor_de_moedas.csproj.CoreCompileInputs.cache
+/home/klaubertofanetto/Projects/Conversor_de_moedas/Conversor_de_moedas/obj/x86/Release/Conversor_de_moedas.exe

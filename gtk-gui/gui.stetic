@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+  </configuration>
+  <import>
+    <widget-library name="../bin/Debug/Conversor_de_moedas.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="537 363">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.Fixed" id="fixed1">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Label" id="label3">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">*valores de conversão consultados às 9h do dia 13/08</property>
+          </widget>
+          <packing>
+            <property name="X">98</property>
+            <property name="Y">325</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txtOutput">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">False</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">180</property>
+            <property name="Y">269</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnConvert">
+            <property name="MemberName">btnConvert</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label">Converter</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="clickButton" />
+          </widget>
+          <packing>
+            <property name="X">226</property>
+            <property name="Y">220</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblConvert">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Converter:</property>
+          </widget>
+          <packing>
+            <property name="X">232</property>
+            <property name="Y">49</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="txtInput">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Text" translatable="yes">0</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">177</property>
+            <property name="Y">82</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.RadioButton" id="btnReal">
+            <property name="MemberName">real</property>
+            <property name="CanFocus">True</property>
+            <property name="Label" translatable="yes">Real</property>
+            <property name="Active">True</property>
+            <property name="DrawIndicator">True</property>
+            <property name="HasLabel">True</property>
+            <property name="UseUnderline">True</property>
+            <property name="Group">convertTo</property>
+          </widget>
+          <packing>
+            <property name="X">330</property>
+            <property name="Y">164</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.RadioButton" id="btnFromReal">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Label" translatable="yes">Real</property>
+            <property name="Active">True</property>
+            <property name="DrawIndicator">True</property>
+            <property name="HasLabel">True</property>
+            <property name="UseUnderline">True</property>
+            <property name="Group">convertFrom</property>
+            <signal name="Toggled" handler="realOn" />
+          </widget>
+          <packing>
+            <property name="X">329</property>
+            <property name="Y">135</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.RadioButton" id="btnFromEuro">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Label" translatable="yes">Euro</property>
+            <property name="DrawIndicator">True</property>
+            <property name="HasLabel">True</property>
+            <property name="UseUnderline">True</property>
+            <property name="Group">convertFrom</property>
+            <signal name="Toggled" handler="euroOn" />
+          </widget>
+          <packing>
+            <property name="X">256</property>
+            <property name="Y">135</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.RadioButton" id="btnEuro">
+            <property name="MemberName">euro</property>
+            <property name="CanFocus">True</property>
+            <property name="Label" translatable="yes">Euro</property>
+            <property name="DrawIndicator">True</property>
+            <property name="HasLabel">True</property>
+            <property name="UseUnderline">True</property>
+            <property name="Group">convertTo</property>
+          </widget>
+          <packing>
+            <property name="X">256</property>
+            <property name="Y">164</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.RadioButton" id="btnDollar">
+            <property name="MemberName">dollar</property>
+            <property name="CanFocus">True</property>
+            <property name="Label" translatable="yes">Dólar</property>
+            <property name="DrawIndicator">True</property>
+            <property name="HasLabel">True</property>
+            <property name="UseUnderline">True</property>
+            <property name="Group">convertTo</property>
+          </widget>
+          <packing>
+            <property name="X">183</property>
+            <property name="Y">165</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.RadioButton" id="btnFromDollar">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Label" translatable="yes">Dólar</property>
+            <property name="DrawIndicator">True</property>
+            <property name="HasLabel">True</property>
+            <property name="UseUnderline">True</property>
+            <property name="Group">convertFrom</property>
+            <signal name="Toggled" handler="dollarOn" />
+          </widget>
+          <packing>
+            <property name="X">183</property>
+            <property name="Y">134</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblToggle1">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">De:</property>
+          </widget>
+          <packing>
+            <property name="X">146</property>
+            <property name="Y">136</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblToggle2">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Para:</property>
+          </widget>
+          <packing>
+            <property name="X">143</property>
+            <property name="Y">168</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>
