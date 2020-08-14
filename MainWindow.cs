@@ -25,27 +25,27 @@ public partial class MainWindow : Gtk.Window
 
         if (btnFromReal.Active && btnDollar.Active)
         {
-            convertedValue = (entryValue / 5.41).ToString();
+            convertedValue = (Math.Round(entryValue / 5.41, 2)).ToString();
              
         } else if (btnFromReal.Active && btnEuro.Active)
         {
-            convertedValue = (entryValue / 6.39).ToString();
+            convertedValue = (Math.Round(entryValue / 6.39, 2)).ToString();
         }
         else if (btnFromDollar.Active && btnEuro.Active)
         {
-            convertedValue = (entryValue / 1.18).ToString();
+            convertedValue = (Math.Round(entryValue / 1.18, 2)).ToString();
         }
         else if (btnFromDollar.Active && btnReal.Active)
         {
-            convertedValue = (entryValue * 5.41).ToString();
+            convertedValue = (Math.Round(entryValue * 5.41, 2)).ToString();
         }
         else if (btnFromEuro.Active && btnDollar.Active)
         {
-            convertedValue = (entryValue * 1.18).ToString();
+            convertedValue = (Math.Round(entryValue * 1.18, 2)).ToString();
         }
         else if (btnFromEuro.Active && btnReal.Active)
         {
-            convertedValue = (entryValue * 6.39).ToString();
+            convertedValue = (Math.Round(entryValue * 6.39, 2)).ToString();
         }
         else
         {
